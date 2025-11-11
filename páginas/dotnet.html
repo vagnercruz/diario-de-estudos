@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introdução ao .NET — Diário de Aprendizados</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a class="brand" href="/">Diário de Aprendizados</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Introdução ao .NET</h1>
+    <p>O .NET é uma plataforma de desenvolvimento free, cross-platform e open-source da Microsoft. Ela permite criar aplicações web, APIs, aplicativos desktop, mobile e muito mais.</p>
+
+    <h2>O que é importante saber</h2>
+    <ul>
+      <li>.NET é a plataforma; o runtime atual é o <strong>.NET 5/6/7/8+</strong> (verificar a versão mais recente).</li>
+      <li>C# é a linguagem mais comum no ecossistema .NET, mas também existem F# e VB.NET.</li>
+      <li>O SDK inclui o <code>dotnet</code> CLI para criar, compilar e executar projetos.</li>
+    </ul>
+
+    <h2>Instalação rápida</h2>
+    <p>Instale o SDK do .NET seguindo as instruções em <a href="https://dotnet.microsoft.com">dotnet.microsoft.com</a>. Em sistemas Linux muitas vezes existe um pacote oficial ou instruções com script.</p>
+
+    <h2>Comandos iniciais</h2>
+    <p>Exemplos usando a CLI <code>dotnet</code>:</p>
+    <pre>
+dotnet new console -o HelloWorld      # cria um app console
+cd HelloWorld
+dotnet run                            # compila e executa
+dotnet build                          # somente compila
+dotnet new webapi -o MinhaApi         # cria uma API web básica
+    </pre>
+
+    <h2>Recursos de aprendizado</h2>
+    <ul>
+      <li><a href="https://learn.microsoft.com/dotnet/">Documentação oficial do .NET</a></li>
+      <li><a href="https://docs.microsoft.com/learn/paths/dotnet-first-steps/">Microsoft Learn - primeiros passos</a></li>
+      <li><a href="https://www.youtube.com/@dotnet">Canal .NET no YouTube</a></li>
+    </ul>
+
+    <p><a href="/">Voltar para a página inicial</a></p>
+  </main>
+</body>
+</html>
