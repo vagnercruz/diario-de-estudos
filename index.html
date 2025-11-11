@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudos sobre programação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" role="navigation" aria-label="Menu principal">
+      <a class="brand" href="/">Diário de Aprendizados</a>
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger"></span>
+      </button>
+      <ul id="primary-navigation" class="nav-links" data-visible="false">
+        <li><a href="/">Início</a></li>
+        <li><a href="páginas/aulas.html">Aulas</a></li>
+        <li><a href="#tutorials">Tutoriais</a></li>
+        <li><a href="páginas/sobre.html">Sobre</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bem-vindo aos Estudos sobre Programação</h1>
+    <p>Este é um site dedicado a compartilhar conhecimentos e recursos sobre programação.</p>
+    <h2 id="recursos">Recursos</h2>
+    <ul>
+      <li><a href="https://www.w3schools.com">W3Schools</a></li>
+      <li><a href="https://developer.mozilla.org/pt-BR/">MDN Web Docs</a></li>
+      <li><a href="https://stackoverflow.com">Stack Overflow</a></li>
+    </ul>
+  </main>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      // Keep ARIA and data-visible in sync
+      function setOpen(open) {
+        nav.dataset.visible = open ? 'true' : 'false';
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      toggle.addEventListener('click', function () {
+        const isOpen = nav.dataset.visible === 'true';
+        setOpen(!isOpen);
+      });
+      // Close menu on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+      });
+      // Close when focus moves outside the nav on small screens
+      document.addEventListener('click', function (e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+          setOpen(false);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
